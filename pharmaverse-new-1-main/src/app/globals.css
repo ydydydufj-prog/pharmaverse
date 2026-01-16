@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Then paste your font imports and other styles below */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* Keep your landing page dark and the dashboard light as we discussed */
+html, body {
+  background-color: #09090b; /* Midnight Black for Landing Page */
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.medical-dashboard {
+  background-color: #ffffff !important;
+  color: #37352f !important; /* Notion dark text color */
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
+}
+
+/* Notion Titles: Slightly tighter, distinct grey */
+.medical-dashboard h1 {
+  @apply text-[38px] font-bold tracking-tight text-[#37352f] leading-tight mb-4;
+}
+
+.medical-dashboard h2 {
+  @apply text-[24px] font-bold tracking-tight text-[#37352f] mb-3;
+}
+
+/* Premium Notion Grid Spacing */
+.premium-card {
+  @apply bg-white rounded-xl border border-[#ebebe9] transition-all hover:bg-[#fbfbfa];
+}
+
+/* Notion Scrollbar style */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d3d1cb;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
